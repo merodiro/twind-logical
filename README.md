@@ -1,6 +1,6 @@
 # twind-logical
 
-![build](https://github.com/merodiro/twind-logical/workflows/build/badge.svg)
+![build](https://github.com/merodiro/twind-logical/actions/workflows/main.yml/badge.svg)
 [![NPM](https://img.shields.io/npm/v/twind-logical.svg)](https://github.com/merodiro/twind-logical/releases)
 [![Downloads](https://img.shields.io/npm/dt/twind-logical.svg)](https://www.npmjs.com/package/tailwindcss)
 [![License](https://img.shields.io/npm/l/twind-logical.svg)](https://github.com/merodiro/twind-logical/blob/master/LICENSE.txt)
