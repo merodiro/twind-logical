@@ -1,5 +1,4 @@
 import type { Negatable, FromTheme, Plugin, Join } from 'twind'
-import css from 'twind/css'
 
 declare module 'twind' {
   interface Plugins {
