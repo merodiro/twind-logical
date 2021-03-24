@@ -1,0 +1,74 @@
+{
+  "name": "twind-logical",
+  "version": "0.0.1",
+  "description": "A Tailwind JS plugin for automatically styling plain HTML content with beautiful typographic defaults.",
+  "//": "mark as private to prevent accidental publish - use 'yarn release'",
+  "private": true,
+  "keywords": [
+    "tailwind",
+    "tw-in-js",
+    "tailwind-in-js"
+  ],
+  "homepage": "https://github.com/tw-in-js/typography#readme",
+  "bugs": "https://github.com/tw-in-js/typography/issues",
+  "repository": "github:tw-in-js/typography",
+  "license": "MIT",
+  "contributors": [
+    "Amr Gad (https://github.com/merodiro)"
+  ],
+  "// The 'module', 'unpkg' and 'types' fields are added by distilt": "",
+  "main": "src/index.ts",
+  "// Each entry is expanded into several bundles (module, script, types, require, node, and default)": "",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "twind": ">=0.14.4",
+    "typescript": "^4.1.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "distilt",
+    "format": "prettier --write --ignore-path .gitignore .",
+    "release": "npx np --contents dist",
+    "start": "snowpack dev",
+    "version": "yarn build"
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@prefresh/snowpack": "^3.1.2",
+    "@size-limit/file": "^4.10.1",
+    "@types/snowpack-env": "^2.3.3",
+    "distilt": "^0.10.4",
+    "esbuild": "^0.9.6",
+    "execa": "^5.0.0",
+    "preact": "^10.5.13",
+    "prettier": "^2.0.5",
+    "size-limit": "^4.10.1",
+    "snowpack": "^3.1.2",
+    "twind": "^0.16.9",
+    "typescript": "^4.2.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
+  },
+  "size-limit": [
+    {
+      "path": "./dist/typography.js",
+      "limit": "3 KB"
+    }
+  ]
+}
