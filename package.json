@@ -1,7 +1,7 @@
 {
   "name": "twind-logical",
   "version": "0.0.1",
-  "description": "A Tailwind JS plugin for automatically styling plain HTML content with beautiful typographic defaults.",
+  "description": "A CSS Logical Properties and Values plugin for twind.",
   "//": "mark as private to prevent accidental publish - use 'yarn release'",
   "private": true,
   "keywords": [
@@ -9,9 +9,9 @@
     "tw-in-js",
     "tailwind-in-js"
   ],
-  "homepage": "https://github.com/tw-in-js/typography#readme",
-  "bugs": "https://github.com/tw-in-js/typography/issues",
-  "repository": "github:tw-in-js/typography",
+  "homepage": "https://github.com/merodiro/twind-logical#readme",
+  "bugs": "https://github.com/merodiro/twind-logical/issues",
+  "repository": "github:merodiro/twind-logical",
   "license": "MIT",
   "contributors": [
     "Amr Gad (https://github.com/merodiro)"
@@ -67,7 +67,7 @@
   },
   "size-limit": [
     {
-      "path": "./dist/typography.js",
+      "path": "./dist/twind-logical.js",
       "limit": "3 KB"
     }
   ]
