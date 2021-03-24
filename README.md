@@ -2,8 +2,8 @@
 
 ![build](https://github.com/merodiro/twind-logical/actions/workflows/main.yml/badge.svg)
 [![NPM](https://img.shields.io/npm/v/twind-logical.svg)](https://github.com/merodiro/twind-logical/releases)
-[![Downloads](https://img.shields.io/npm/dt/twind-logical.svg)](https://www.npmjs.com/package/tailwindcss)
-[![License](https://img.shields.io/npm/l/twind-logical.svg)](https://github.com/merodiro/twind-logical/blob/master/LICENSE.txt)
+[![Downloads](https://img.shields.io/npm/dt/twind-logical.svg)](https://www.npmjs.com/package/twind-logical)
+[![License](https://img.shields.io/npm/l/twind-logical.svg)](https://github.com/merodiro/twind-logical/blob/master/LICENSE)
 
 A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
 [twind CSS](https://twind.dev/).
