@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "preact": "./preact.js",
+    "preact/devtools": "./preact/devtools.js",
+    "preact/hooks": "./preact/hooks.js",
+    "twind/colors": "./twind/colors.js",
+    "twind/shim": "./twind/shim.js"
+  }
+}
