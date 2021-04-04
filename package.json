@@ -75,6 +75,10 @@
     {
       "path": "./dist/twind-logical.js",
       "limit": "3 KB"
+    },
+    {
+      "path": "./dist/compat/compat.js",
+      "limit": "3 KB"
     }
   ]
 }
