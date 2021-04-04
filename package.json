@@ -1,6 +1,6 @@
 {
   "name": "twind-logical",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A CSS Logical Properties and Values plugin for twind.",
   "//": "mark as private to prevent accidental publish - use 'yarn release'",
   "private": true,
