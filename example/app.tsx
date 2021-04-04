@@ -15,7 +15,7 @@ export default function App(): JSX.Element {
               <div class="flex flex-col">
                 <h1 class="text-center">
                   <span class="block plb-0.5 text-6xl">🖖</span>{' '}
-                  <span class="font-bold leading-8 text-xl">tailwindcss-logical</span>
+                  <span class="font-bold leading-8 text-xl">twind-logical</span>
                 </h1>
                 <div class="flex justify-center">
                   <button
@@ -142,30 +142,22 @@ export default function App(): JSX.Element {
             >
               <p>
                 The following is an demonstration of every type of utility provided by
-                tailwindcss-logical. You can read about installation, configuration, and more in{' '}
+                twind-logical. You can read about installation, configuration, and more in{' '}
                 <a
                   class="font-medium text-cyan-600 underline hover:text-cyan-800"
-                  href="https://github.com/stevecochrane/tailwindcss-logical/#tailwindcss-logical"
+                  href="https://github.com/merodiro/twind-logical#twind-logical"
                 >
                   the project's README
                 </a>
                 .
               </p>
               <p>
-                This page is entirely styled with Tailwind classes, from{' '}
+                This page is entirely styled with twind, from{' '}
                 <a
                   class="font-medium text-cyan-600 underline hover:text-cyan-800"
-                  href="https://github.com/stevecochrane/tailwindcss-logical/blob/master/docs/tailwind.config.js"
+                  href="https://github.com/merodiro/twind-logical/blob/main/example/index.tsx"
                 >
-                  a mostly unmodified Tailwind config file
-                </a>
-                . To achieve better browser support, tailwindcss-logical's styles are run through
-                some additional PostCSS plugins.{' '}
-                <a
-                  class="font-medium text-cyan-600 underline hover:text-cyan-800"
-                  href="https://github.com/stevecochrane/tailwindcss-logical#browser-compatibility"
-                >
-                  Read more about browser compatibility
+                  a mostly unmodified twind config file
                 </a>
                 .
               </p>
@@ -939,7 +931,7 @@ export default function App(): JSX.Element {
                 Ready to get started? Check out the{' '}
                 <a
                   class="font-medium text-cyan-600 underline hover:text-cyan-800"
-                  href="https://github.com/stevecochrane/tailwindcss-logical/#tailwindcss-logical"
+                  href="https://github.com/merodiro/twind-logical#twind-logical"
                 >
                   README
                 </a>{' '}
@@ -951,17 +943,17 @@ export default function App(): JSX.Element {
             <p>
               <a
                 class="underline hover:text-black"
-                href="https://github.com/stevecochrane/tailwindcss-logical/"
+                href="https://github.com/merodiro/twind-logical"
               >
-                tailwindcss-logical
+                twind-logical
               </a>{' '}
               is a plugin for{' '}
-              <a class="underline hover:text-black" href="https://tailwindcss.com/">
-                Tailwind CSS
+              <a class="underline hover:text-black" href="http://twind.dev/">
+                twind
               </a>{' '}
               by{' '}
-              <a class="underline hover:text-black" href="https://stevecochrane.com/">
-                Steve Cochrane
+              <a class="underline hover:text-black" href="https://twitter.com/amr_c137">
+                Amr Gad
               </a>
               .<br class="hidden sm:inline" /> If you like the project, please give it a star on
               GitHub. Thank you!
