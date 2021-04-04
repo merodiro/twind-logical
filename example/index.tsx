@@ -8,7 +8,7 @@ import { setup } from 'twind/shim'
 import { teal, cyan, lightBlue } from 'twind/colors'
 
 // eslint-disable-next-line unicorn/import-index
-import twindLogical from '../src/index'
+import twindLogical from '../src/compat'
 
 import App from './app'
 

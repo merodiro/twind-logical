@@ -44,119 +44,177 @@ declare module 'twind' {
 
 const twindLogical: Record<string, Plugin> = {
   // Float
-  'float-start': { float: 'inline-start' },
-  'float-end': { float: 'inline-end' },
+  'float-start': {
+    '&[dir=ltr], [dir=ltr] &': { float: 'left' },
+    '&[dir=rtl], [dir=rtl] &': { float: 'right' },
+  },
+  'float-end': {
+    '&[dir=ltr], [dir=ltr] &': { float: 'right' },
+    '&[dir=rtl], [dir=rtl] &': { float: 'left' },
+  },
 
   // Clear
-  'clear-start': { clear: 'inline-start' },
-  'clear-end': { clear: 'inline-end' },
+  'clear-start': {
+    '&[dir=ltr], [dir=ltr] &': { clear: 'left' },
+    '&[dir=rtl], [dir=rtl] &': { clear: 'right' },
+  },
+  'clear-end': {
+    '&[dir=ltr], [dir=ltr] &': { clear: 'right' },
+    '&[dir=rtl], [dir=rtl] &': { clear: 'left' },
+  },
 
   // text align
-  'text-start': { textAlign: 'start' },
-  'text-end': { textAlign: 'end' },
+  'text-start': {
+    '&[dir=ltr], [dir=ltr] &': { textAlign: 'left' },
+    '&[dir=rtl], [dir=rtl] &': { textAlign: 'right' },
+  },
+  'text-end': {
+    '&[dir=ltr], [dir=ltr] &': { textAlign: 'right' },
+    '&[dir=rtl], [dir=rtl] &': { textAlign: 'left' },
+  },
 
   // resize
-  'resize-block': { resize: 'block' },
-  'resize-inline': { resize: 'inline' },
+  'resize-block': { resize: 'vertical' },
+  'resize-inline': { resize: 'horizontal' },
 
   // overscroll
-  'overscroll-b-auto': { overscrollBehaviorBlock: 'auto' },
-  'overscroll-b-contain': { overscrollBehaviorBlock: 'contain' },
-  'overscroll-b-none': { overscrollBehaviorBlock: 'none' },
-  'overscroll-i-auto': { overscrollBehaviorInline: 'auto' },
-  'overscroll-i-contain': { overscrollBehaviorInline: 'contain' },
-  'overscroll-i-none': { overscrollBehaviorInline: 'none' },
+  'overscroll-b-auto': { overscrollBehaviorY: 'auto' },
+  'overscroll-b-contain': { overscrollBehaviorY: 'contain' },
+  'overscroll-b-none': { overscrollBehaviorY: 'none' },
+  'overscroll-i-auto': { overscrollBehaviorX: 'auto' },
+  'overscroll-i-contain': { overscrollBehaviorX: 'contain' },
+  'overscroll-i-none': { overscrollBehaviorX: 'none' },
 
   // block size
   bs: (params, { theme }) => {
     const value = theme('width', params)
-    return value && { blockSize: value }
+    return value && { height: value }
   },
 
   // min block size
   'min-bs': (params, { theme }) => {
     const value = theme('minWidth', params)
-    return value && { minBlockSize: value }
+    return value && { minHeight: value }
   },
 
   // max block size
   'max-bs': (params, { theme }) => {
     const value = theme('maxWidth', params)
-    return value && { maxBlockSize: value }
+    return value && { maxHeight: value }
   },
 
   // inline size
   is: (params, { theme }) => {
     const value = theme('width', params)
-    return value && { inlineSize: value }
+    return value && { width: value }
   },
 
   // min inline size
   'min-is': (params, { theme }) => {
     const value = theme('minWidth', params)
-    return value && { minInlineSize: value }
+    return value && { minWidth: value }
   },
 
   // max inline size
   'max-is': (params, { theme }) => {
     const value = theme('maxWidth', params)
-    return value && { maxInlineSize: value }
+    return value && { maxWidth: value }
   },
 
   // margin shorthand
   mlb: (params, { theme }) => {
     const value = theme('margin', params)
-    return value && { marginBlock: value }
+    return (
+      value && {
+        marginTop: value,
+        marginBottom: value,
+      }
+    )
   },
   mli: (params, { theme }) => {
     const value = theme('margin', params)
-    return value && { marginInline: value }
+    return (
+      value && {
+        marginRight: value,
+        marginLeft: value,
+      }
+    )
   },
 
   // margin single side
   mbs: (params, { theme }) => {
     const value = theme('margin', params)
-    return value && { marginBlockStart: value }
+    return value && { marginTop: value }
   },
   mbe: (params, { theme }) => {
     const value = theme('margin', params)
-    return value && { marginBlockEnd: value }
+    return value && { marginBottom: value }
   },
   mis: (params, { theme }) => {
     const value = theme('margin', params)
-    return value && { marginInlineStart: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { marginLeft: value },
+        '&[dir=rtl], [dir=rtl] &': { marginRight: value },
+      }
+    )
   },
   mie: (params, { theme }) => {
     const value = theme('margin', params)
-    return value && { marginInlineEnd: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { marginRight: value },
+        '&[dir=rtl], [dir=rtl] &': { marginLeft: value },
+      }
+    )
   },
 
   // padding shorthand
   plb: (params, { theme }) => {
     const value = theme('padding', params)
-    return value && { paddingBlock: value }
+    return (
+      value && {
+        paddingTop: value,
+        paddingBottom: value,
+      }
+    )
   },
   pli: (params, { theme }) => {
     const value = theme('padding', params)
-    return value && { paddingInline: value }
+    return (
+      value && {
+        paddingRight: value,
+        paddingLeft: value,
+      }
+    )
   },
 
   // padding single side
   pbs: (params, { theme }) => {
     const value = theme('padding', params)
-    return value && { paddingBlockStart: value }
+    return value && { paddingTop: value }
   },
   pbe: (params, { theme }) => {
     const value = theme('padding', params)
-    return value && { paddingBlockEnd: value }
+    return value && { paddingBottom: value }
   },
   pis: (params, { theme }) => {
     const value = theme('padding', params)
-    return value && { paddingInlineStart: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { paddingLeft: value },
+        '&[dir=rtl], [dir=rtl] &': { paddingRight: value },
+      }
+    )
   },
   pie: (params, { theme }) => {
     const value = theme('padding', params)
-    return value && { paddingInlineEnd: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { paddingRight: value },
+        '&[dir=rtl], [dir=rtl] &': { paddingLeft: value },
+      }
+    )
   },
 
   // space between
@@ -166,8 +224,8 @@ const twindLogical: Record<string, Plugin> = {
       value && {
         '> :not([hidden]) ~ :not([hidden])': {
           '--tw-space-b-reverse': '0',
-          marginBlockStart: `calc(${value} * calc(1 - var(--tw-space-b-reverse)))`,
-          marginBlockEnd: `calc(${value} * var(--tw-space-b-reverse))`,
+          marginTop: `calc(${value} * calc(1 - var(--tw-space-b-reverse)))`,
+          marginBottom: `calc(${value} * var(--tw-space-b-reverse))`,
         },
       }
     )
@@ -183,8 +241,15 @@ const twindLogical: Record<string, Plugin> = {
       value && {
         '> :not([hidden]) ~ :not([hidden])': {
           '--tw-space-i-reverse': '0',
-          marginInlineStart: `calc(${value} * calc(1 - var(--tw-space-i-reverse)))`,
-          marginInlineEnd: `calc(${value} * var(--tw-space-i-reverse))`,
+
+          '&[dir=ltr], [dir=ltr] &': {
+            marginLeft: `calc(${value} * calc(1 - var(--tw-space-i-reverse)))`,
+            marginRight: `calc(${value} * var(--tw-space-i-reverse))`,
+          },
+          '&[dir=rtl], [dir=rtl] &': {
+            marginRight: `calc(${value} * calc(1 - var(--tw-space-i-reverse)))`,
+            marginLeft: `calc(${value} * var(--tw-space-i-reverse))`,
+          },
         },
       }
     )
@@ -198,79 +263,144 @@ const twindLogical: Record<string, Plugin> = {
   // inset
   'inset-block': (params, { theme }) => {
     const value = theme('inset', params)
-    return value && { insetBlock: value }
+    return (
+      value && {
+        top: value,
+        bottom: value,
+      }
+    )
   },
   'inset-inline': (params, { theme }) => {
     const value = theme('inset', params)
-    return value && { insetInline: value }
+    return (
+      value && {
+        left: value,
+        right: value,
+      }
+    )
   },
 
   // inset single value
   'block-start': (params, { theme }) => {
     const value = theme('inset', params)
-    return value && { insetBlockStart: value }
+    return value && { top: value }
   },
   'block-end': (params, { theme }) => {
     const value = theme('inset', params)
-    return value && { insetBlockEnd: value }
+    return value && { bottom: value }
   },
   'inline-start': (params, { theme }) => {
     const value = theme('inset', params)
-    return value && { insetInlineStart: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { left: value },
+        '&[dir=rtl], [dir=rtl] &': { right: value },
+      }
+    )
   },
   'inline-end': (params, { theme }) => {
     const value = theme('inset', params)
-    return value && { insetInlineEnd: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { right: value },
+        '&[dir=rtl], [dir=rtl] &': { left: value },
+      }
+    )
   },
 
   // border width
   'border-bs': (params, { theme }) => {
     const value = theme('borderWidth', params)
-    return value && { borderBlockStartWidth: value }
+    return value && { borderTopWidth: value }
   },
   'border-be': (params, { theme }) => {
     const value = theme('borderWidth', params)
-    return value && { borderBlockEndWidth: value }
+    return value && { borderBottomWidth: value }
   },
   'border-is': (params, { theme }) => {
     const value = theme('borderWidth', params)
-    return value && { borderInlineStartWidth: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { borderLeftWidth: value },
+        '&[dir=rtl], [dir=rtl] &': { borderRightWidth: value },
+      }
+    )
   },
   'border-ie': (params, { theme }) => {
     const value = theme('borderWidth', params)
-    return value && { borderInlineEndWidth: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { borderRightWidth: value },
+        '&[dir=rtl], [dir=rtl] &': { borderLeftWidth: value },
+      }
+    )
   },
 
   // border radius side
   'rounded-bs': (params, { theme }) => {
     const value = theme('borderRadius', params)
-    return value && { borderStartStartRadius: value, borderStartEndRadius: value }
+    return (
+      value && {
+        borderTopLeftRadius: value,
+        borderTopRightRadius: value,
+      }
+    )
   },
   'rounded-be': (params, { theme }) => {
     const value = theme('borderRadius', params)
-    return value && { borderEndStartRadius: value, borderEndEndRadius: value }
+    return (
+      value && {
+        borderBottomLeftRadius: value,
+        borderBottomRightRadius: value,
+      }
+    )
   },
   'rounded-is': (params, { theme }) => {
     const value = theme('borderRadius', params)
-    return value && { borderStartStartRadius: value, borderEndStartRadius: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { borderTopLeftRadius: value, borderBottomLeftRadius: value },
+        '&[dir=rtl], [dir=rtl] &': { borderTopRightRadius: value, borderBottomRightRadius: value },
+      }
+    )
   },
   'rounded-ie': (params, { theme }) => {
     const value = theme('borderRadius', params)
-    return value && { borderStartEndRadius: value, borderEndEndRadius: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { borderTopRightRadius: value, borderBottomRightRadius: value },
+        '&[dir=rtl], [dir=rtl] &': { borderTopLeftRadius: value, borderBottomLeftRadius: value },
+      }
+    )
   },
 
   // border radius corder
   'rounded-ss': (params, { theme }) => {
     const value = theme('borderRadius', params)
-    return value && { borderStartStartRadius: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { borderTopLeftRadius: value },
+        '&[dir=rtl], [dir=rtl] &': { borderTopRightRadius: value },
+      }
+    )
   },
   'rounded-se': (params, { theme }) => {
     const value = theme('borderRadius', params)
-    return value && { borderStartEndRadius: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { borderTopRightRadius: value },
+        '&[dir=rtl], [dir=rtl] &': { borderTopLeftRadius: value },
+      }
+    )
   },
   'rounded-es': (params, { theme }) => {
     const value = theme('borderRadius', params)
-    return value && { borderEndStartRadius: value }
+    return (
+      value && {
+        '&[dir=ltr], [dir=ltr] &': { borderBottomLeftRadius: value },
+        '&[dir=rtl], [dir=rtl] &': { borderBottomRightRadius: value },
+      }
+    )
   },
   'rounded-ee': (params, { theme }) => {
     const value = theme('borderRadius', params)
@@ -284,8 +414,8 @@ const twindLogical: Record<string, Plugin> = {
       value && {
         '> :not([hidden]) ~ :not([hidden])': {
           '--tw-divide-b-reverse': '0',
-          borderBlockStartWidth: `calc(${value} * calc(1 - var(--tw-divide-b-reverse)))`,
-          borderBlockEndWidth: `calc(${value} * var(--tw-divide-b-reverse))`,
+          borderTopWidth: `calc(${value} * calc(1 - var(--tw-divide-b-reverse)))`,
+          borderBottomWidth: `calc(${value} * var(--tw-divide-b-reverse))`,
         },
       }
     )
@@ -301,8 +431,14 @@ const twindLogical: Record<string, Plugin> = {
       value && {
         '> :not([hidden]) ~ :not([hidden])': {
           '--tw-divide-i-reverse': '0',
-          borderInlineStartWidth: `calc(${value} * calc(1 - var(--tw-divide-i-reverse)))`,
-          borderInlineEndWidth: `calc(${value} * var(--tw-divide-i-reverse))`,
+          '&[dir=ltr], [dir=ltr] &': {
+            borderLeftWidth: `calc(${value} * calc(1 - var(--tw-divide-i-reverse)))`,
+            borderRightWidth: `calc(${value} * var(--tw-divide-i-reverse))`,
+          },
+          '&[dir=rtl], [dir=rtl] &': {
+            borderRightWidth: `calc(${value} * calc(1 - var(--tw-divide-i-reverse)))`,
+            borderLeftWidth: `calc(${value} * var(--tw-divide-i-reverse))`,
+          },
         },
       }
     )

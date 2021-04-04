@@ -34,6 +34,20 @@ setup({
 })
 ```
 
+or for better browser compatibility
+
+_Note: the compat version only supports RTL and LTR_
+
+```js
+import twindLogical from 'twind-logical/compat'
+
+setup({
+  plugins: {
+    ...twindLogical,
+  },
+})
+```
+
 ## What are CSS Logical Properties and Values?
 
 In short, CSS Logical Properties and Values extend CSS for easier development when working with non-LTR (left-to-right)
