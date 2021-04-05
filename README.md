@@ -48,6 +48,26 @@ setup({
 })
 ```
 
+when using the compat version
+
+```css
+.float-start {
+  float: inline-start;
+}
+
+/* ↓ ↓ ↓ */
+
+.float-start[dir='ltr'],
+[dir='ltr'] .float-start {
+  float: left;
+}
+
+.float-start[dir='rtl'],
+[dir='rtl'] .float-start {
+  float: right;
+}
+```
+
 ## What are CSS Logical Properties and Values?
 
 In short, CSS Logical Properties and Values extend CSS for easier development when working with non-LTR (left-to-right)
