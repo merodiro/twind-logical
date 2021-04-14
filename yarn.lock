@@ -1344,10 +1344,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-twind@^0.16.9:
-  version "0.16.9"
-  resolved "https://registry.yarnpkg.com/twind/-/twind-0.16.9.tgz#62d04a12d4a96f5f1e72e477af4e8634f356eaac"
-  integrity sha512-cOpijhtEMEaIhHQ4H3+K/APn1kAYkMtV3fMB/zBfXP+rmKiwjnNZSot8w8YNGnKDqLbV+uCSuFiZtPL60Jscaw==
+twind@^0.16.11:
+  version "0.16.11"
+  resolved "https://registry.yarnpkg.com/twind/-/twind-0.16.11.tgz#f843600526769c3ce878a122d87892c39132507c"
+  integrity sha512-wcR/7ogmraz/YoE1Qh+ZdNXsigK92ShhGrLXrfh9IU2jsgzE2j3a3lNIXGz94efGk0XJd2OViulx/Oyi+MVliA==
   dependencies:
     csstype "^3.0.5"
     htmlparser2 "^6.0.0"
