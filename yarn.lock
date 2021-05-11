@@ -512,10 +512,10 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-distilt@^0.10.4:
-  version "0.10.4"
-  resolved "https://registry.yarnpkg.com/distilt/-/distilt-0.10.4.tgz#814211450ead65619bc79f917dc6b93820fc1e11"
-  integrity sha512-+F1cpyQ53YgxLffA2PIqgWO6QH1HB9uQhfXJHhohxmH06ilWbVxuZiYuFenv2aVrPBIBfq0TVubHJnnr4Y7ydQ==
+distilt@^0.10.5:
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/distilt/-/distilt-0.10.5.tgz#277cf80e69e354599800a8a1a835a50c3b787608"
+  integrity sha512-Yx73DXhwD5iJNEfaXnAIeqDfvRtgqSFYibasYmTBXAce2rMRx3fKO5znAomazxFemytf0N2H6jRdCivaBzCLzw==
   dependencies:
     es-module-lexer "^0.3.26"
     esbuild "^0.9.3"
@@ -683,19 +683,7 @@ globals@^11.1.0:
   resolved "https://registry.npmjs.org/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
-globby@^11.0.1:
-  version "11.0.1"
-  resolved "https://registry.npmjs.org/globby/-/globby-11.0.1.tgz#9a2bf107a068f3ffeabc49ad702c79ede8cfd357"
-  integrity sha512-iH9RmgwCmUJHi2z5o2l3eTtGBtXek1OYlHrbcxOYugyHLmAsZrPj43OtHThd62Buh/Vv6VyCBD2bdyWcGNQqoQ==
-  dependencies:
-    array-union "^2.1.0"
-    dir-glob "^3.0.1"
-    fast-glob "^3.1.1"
-    ignore "^5.1.4"
-    merge2 "^1.3.0"
-    slash "^3.0.0"
-
-globby@^11.0.2:
+globby@^11.0.1, globby@^11.0.2:
   version "11.0.3"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.3.tgz#9b1f0cb523e171dd1ad8c7b2a9fb4b644b9593cb"
   integrity sha512-ffdmosjA807y7+lA1NM0jELARVmYul/715xiILEjo3hBLPTcirgQNnXECn5g3mtR8TOLCVbkfua1Hpen25/Xcg==
@@ -1165,14 +1153,7 @@ rollup-plugin-dts@^2.0.1:
   optionalDependencies:
     "@babel/code-frame" "^7.10.4"
 
-rollup@^2.34.0:
-  version "2.34.2"
-  resolved "https://registry.npmjs.org/rollup/-/rollup-2.34.2.tgz#fa73e05c64df587e9ed4dc80d7d4e7d4a43f8908"
-  integrity sha512-mvtQLqu3cNeoctS+kZ09iOPxrc1P1/Bt1z15enuQ5feyKOdM3MJAVFjjsygurDpSWn530xB4AlA83TWIzRstXA==
-  optionalDependencies:
-    fsevents "~2.1.2"
-
-rollup@^2.35.1:
+rollup@^2.34.0, rollup@^2.35.1:
   version "2.35.1"
   resolved "https://registry.npmjs.org/rollup/-/rollup-2.35.1.tgz#e6bc8d10893556a638066f89e8c97f422d03968c"
   integrity sha512-q5KxEyWpprAIcainhVy6HfRttD9kutQpHbeqDTWnqAFNJotiojetK6uqmcydNMymBEtC4I8bCYR+J3mTMqeaUA==
