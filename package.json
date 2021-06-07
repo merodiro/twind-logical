@@ -61,7 +61,7 @@
     "esbuild": "^0.9.6",
     "execa": "^5.0.0",
     "preact": "^10.5.13",
-    "prettier": "^2.0.5",
+    "prettier": "^2.3.1",
     "size-limit": "^4.10.1",
     "snowpack": "^3.1.2",
     "twind": "^0.16.9",
