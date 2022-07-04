@@ -57,7 +57,7 @@
     "@prefresh/snowpack": "^3.1.2",
     "@size-limit/file": "^4.10.1",
     "@types/snowpack-env": "^2.3.3",
-    "distilt": "^0.10.4",
+    "distilt": "^0.16.9",
     "esbuild": "^0.9.6",
     "execa": "^5.0.0",
     "preact": "^10.5.13",
